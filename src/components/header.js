@@ -8,8 +8,7 @@ import { fade, makeStyles } from '@material-ui/core/styles';
 import MenuIcon from '@material-ui/icons/Menu';
 import SearchIcon from '@material-ui/icons/Search';
 import {
-  BrowserRouter as Router,
-  Switch,
+  
   Route,
   Link
 } from "react-router-dom";
@@ -90,7 +89,7 @@ export default function Header() {
           </IconButton>
           
            
-                <Typography className={classes.title} variant="h6" noWrap>
+                <Typography className={classes.title} variant="h6" >
                  <Route>
                     <Link to="/" color="inherite" style={myStyle}>Add Todo</Link>
                     <Link to="/about" color="inherite" style={myStyle}>My Todos</Link>

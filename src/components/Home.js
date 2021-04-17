@@ -13,23 +13,7 @@ import IconButton from '@material-ui/core/IconButton';
 const divStyle={
   margin:10,
 }
-const useStyles2 = makeStyles({
-  root: {
-    minWidth: 275,
-    margin:5,
-  },
-  bullet: {
-    display: "inline-block",
-    margin: "5",
-    transform: "scale(0.8)",
-  },
-  title: {
-    fontSize: 14,
-  },
-  pos: {
-    marginBottom: 12,
-  },
-});
+
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -57,7 +41,6 @@ export default function BasicTextFields() {
     initTodo=get_todos;
   }
   const classes = useStyles();
-  const bull = <span className={classes.bullet}>•</span>;
   const classes2 = useStyles();
   const [title,setTitle]=useState("");
   const [desc,setDescription]=useState("");

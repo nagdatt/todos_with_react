@@ -29,7 +29,7 @@ const useStyles = makeStyles({
 
 export default function About() {
   const classes = useStyles();
-  const [value, setValue] = useState(0);
+ // const [value, setValue] = useState(0);
   const[todos,setTodos]=useState(JSON.parse(localStorage.getItem("todos")));
   console.log(todos)
 
@@ -43,7 +43,7 @@ export default function About() {
  const deleteItem=(key)=>{
  
    let todosUpdates=todos.filter((todo)=>{
-     if(todo.dsno!=key)
+     if(todo.dsno!==key)
      return true;
    })
    //console.log(todos)
@@ -77,9 +77,9 @@ const WriteTable=(todo,key)=>{
     </Card>
   </div>
 }
-  const handleChange = (event, newValue) => {
+  /*const handleChange = (event, newValue) => {
     setValue(newValue);
-  };
+  };*/
 let renders=todos.length;
 if(renders===0){
   renders=<div>
