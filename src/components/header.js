@@ -19,13 +19,7 @@ const useStyles = makeStyles((theme) => ({
   menuButton: {
     marginRight: theme.spacing(2),
   },
-  title: {
-    flexGrow: 1,
-    display: 'none',
-    [theme.breakpoints.up('sm')]: {
-      display: 'block',
-    },
-  },
+
   search: {
     position: 'relative',
     borderRadius: theme.shape.borderRadius,
@@ -90,26 +84,14 @@ export default function Header() {
           
            
                 <Typography className={classes.title} variant="h6" >
-                 <Route>
+                 <Route >
                     <Link to="/" color="inherite" style={myStyle}>Add Todo</Link>
                     <Link to="/about" color="inherite" style={myStyle}>My Todos</Link>
                     </Route>
                 </Typography>
            
          
-          <div className={classes.search}>
-            <div className={classes.searchIcon}>
-              <SearchIcon />
-            </div>
-            <InputBase
-              placeholder=" for future updates"
-              classes={{
-                root: classes.inputRoot,
-                input: classes.inputInput,
-              }}
-              inputProps={{ 'aria-label': 'search' }}
-            />
-          </div>
+       
         </Toolbar>
       </AppBar>
     </div>
